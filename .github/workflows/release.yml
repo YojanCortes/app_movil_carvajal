@@ -12,6 +12,10 @@ jobs:
     name: Crear Release en GitHub
     runs-on: ubuntu-latest
 
+    # Permisos necesarios para crear Releases y hacer push
+    permissions:
+      contents: write
+
     steps:
       # ── 1. Checkout ──────────────────────────────────────────────
       - name: Checkout repositorio
