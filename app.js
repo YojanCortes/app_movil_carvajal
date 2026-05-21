@@ -21,28 +21,9 @@ let versionData = null;
 
 // ── DOM Ready ──────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  generarQR();
   cargarVersionInfo();
   actualizarUrlQR();
 });
-
-// ── Generar QR ─────────────────────────────────────────────────────────
-function generarQR() {
-  const canvas = document.getElementById('qrCanvas');
-  if (!canvas) return;
-
-  QRCode.toCanvas(canvas, CONFIG.pageUrl, {
-    width: 200,
-    margin: 1,
-    color: {
-      dark:  '#000000',
-      light: '#ffffff',
-    },
-    errorCorrectionLevel: 'H',
-  }, (err) => {
-    if (err) console.error('QR error:', err);
-  });
-}
 
 // ── Actualizar texto URL del QR ────────────────────────────────────────
 function actualizarUrlQR() {

@@ -363,7 +363,13 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   flex-shrink: 0;
 }
-.qr-wrapper canvas { display: block; border-radius: 8px; }
+.qr-image {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
 .qr-info {
   display: flex;
   flex-direction: column;
