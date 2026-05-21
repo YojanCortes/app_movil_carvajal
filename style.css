@@ -344,7 +344,7 @@ body {
   border: 1px solid var(--border2);
   border-radius: 20px;
   padding: 24px;
-  max-width: 480px;
+  max-width: 560px;
   width: 100%;
   box-shadow: var(--shadow);
 }
@@ -366,8 +366,8 @@ body {
 }
 .qr-image {
   display: block;
-  width: 180px;
-  height: 180px;
+  width: 235px;
+  height: 235px;
   object-fit: contain;
   border-radius: 6px;
 }
