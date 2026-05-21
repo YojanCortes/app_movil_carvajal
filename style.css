@@ -399,6 +399,34 @@ body {
 .btn-copy:hover { background: var(--accent-light); transform: translateY(-1px); }
 .btn-copy.copied { background: #22c55e; }
 
+.qr-action-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.btn-download-qr {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg2);
+  color: var(--text);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.btn-download-qr:hover {
+  background: var(--bg);
+  border-color: rgba(255,255,255,0.25);
+  transform: translateY(-1px);
+}
+
 .qr-steps {
   border-top: 1px solid var(--border);
   padding-top: 28px;
