@@ -342,50 +342,50 @@ body {
 .qr-card {
   background: var(--bg3);
   border: 1px solid var(--border2);
-  border-radius: 24px;
-  padding: 40px;
-  max-width: 640px;
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 480px;
   width: 100%;
   box-shadow: var(--shadow);
 }
 .qr-card-inner {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 .qr-wrapper {
   background: #fff;
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   flex-shrink: 0;
   display: inline-block;
 }
 .qr-image {
   display: block;
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .qr-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 10px;
   text-align: left;
 }
 .qr-url {
-  font-size: 13px;
+  font-size: 11px;
   color: var(--text-muted);
   word-break: break-all;
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 14px;
+  border-radius: 6px;
+  padding: 6px 10px;
   font-family: monospace;
 }
 .btn-copy {
@@ -436,10 +436,10 @@ body {
 
 .qr-steps {
   border-top: 1px solid var(--border);
-  padding-top: 28px;
+  padding-top: 18px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 .qr-step { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
 .step-num {
