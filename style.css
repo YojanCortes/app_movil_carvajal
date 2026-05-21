@@ -358,17 +358,18 @@ body {
 }
 .qr-wrapper {
   background: #fff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
   flex-shrink: 0;
+  display: inline-block;
 }
 .qr-image {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 .qr-info {
   display: flex;
