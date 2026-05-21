@@ -1,7 +1,7 @@
-﻿{
-    "notas":  "v1.0.4: Venta Micros siempre activa, sin necesidad de viajes asignados",
-    "pagina_descarga":  "https://yojancortes.github.io/app_movil_carvajal/",
-    "fecha":  "2026-05-20",
-    "version":  "1.0.4",
-    "apk_url":  "https://raw.githubusercontent.com/YojanCortes/app_movil_carvajal/main/app-carvajal.apk"
+{
+  "notas": "v1.0.4: Venta Micros siempre activa, sin necesidad de viajes asignados",
+  "pagina_descarga": "https://yojancortes.github.io/app_movil_carvajal/",
+  "fecha": "2026-05-20",
+  "version": "1.0.4",
+  "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.0.4/app-carvajal.apk"
 }
