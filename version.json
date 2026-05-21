@@ -1,7 +1,7 @@
-﻿{
-    "notas":  "Version 1.0.2: Correccion definitiva del instalador automatico con open_filex y nuevo icono",
-    "pagina_descarga":  "https://yojancortes.github.io/app_movil_carvajal/",
-    "fecha":  "2026-05-20",
-    "version":  "1.0.2",
-    "apk_url":  "https://raw.githubusercontent.com/YojanCortes/app_movil_carvajal/main/app-carvajal.apk"
+{
+  "version": "1.0.2",
+  "apk_url": "https://raw.githubusercontent.com/YojanCortes/app_movil_carvajal/main/app-carvajal.apk",
+  "notas": "Version 1.0.2: Correccion definitiva del instalador automatico con open_filex y nuevo icono",
+  "fecha": "2026-05-20",
+  "pagina_descarga": "https://yojancortes.github.io/app_movil_carvajal/"
 }
