@@ -1,0 +1,119 @@
+name: 🚌 Publicar Release APK
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'app-carvajal.apk'   # Solo se activa cuando se sube un nuevo APK
+      - 'version.json'
+
+jobs:
+  publicar-release:
+    name: Crear Release en GitHub
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ── 2. Leer version.json ─────────────────────────────────────
+      - name: Leer versión actual
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' version.json)
+          NOTAS=$(jq -r '.notas' version.json)
+          FECHA=$(jq -r '.fecha' version.json)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "notas=$NOTAS"     >> $GITHUB_OUTPUT
+          echo "fecha=$FECHA"     >> $GITHUB_OUTPUT
+          echo "🔖 Versión detectada: v$VERSION"
+
+      # ── 3. Verificar que el APK existe ───────────────────────────
+      - name: Verificar APK
+        run: |
+          if [ -f "app-carvajal.apk" ]; then
+            SIZE=$(du -sh app-carvajal.apk | cut -f1)
+            echo "✅ APK encontrado: $SIZE"
+          else
+            echo "❌ No se encontró app-carvajal.apk"
+            exit 1
+          fi
+
+      # ── 4. Eliminar release anterior (si existe) ─────────────────
+      - name: Eliminar release anterior si existe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="v${{ steps.version.outputs.version }}"
+          # Intentar eliminar release y tag existente (si ya existe)
+          gh release delete "$TAG" --yes 2>/dev/null || true
+          git push origin ":refs/tags/$TAG" 2>/dev/null || true
+
+      # ── 5. Crear nuevo GitHub Release ────────────────────────────
+      - name: Crear GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="v${{ steps.version.outputs.version }}"
+          TITLE="🚌 App Carvajal Bugueno — v${{ steps.version.outputs.version }}"
+          BODY="## 🚌 App Buses Carvajal Bugueno
+
+          **Versión:** v${{ steps.version.outputs.version }}
+          **Fecha:** ${{ steps.version.outputs.fecha }}
+
+          ### 📋 Notas de la versión
+          ${{ steps.version.outputs.notas }}
+
+          ---
+
+          ### 📲 Instalación
+          1. Descarga el archivo \`app-carvajal.apk\`
+          2. Abre el APK desde tu teléfono Android
+          3. Permite la instalación de fuentes desconocidas si se solicita
+          4. ¡Listo!
+
+          🌐 **Página de descarga:** https://yojancortes.github.io/app_movil_carvajal/"
+
+          gh release create "$TAG" \
+            --title "$TITLE" \
+            --notes "$BODY" \
+            --latest \
+            app-carvajal.apk
+
+          echo "✅ Release $TAG creado exitosamente"
+
+      # ── 6. Actualizar apk_url en version.json con URL del Release ─
+      - name: Actualizar URL del APK en version.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="v${{ steps.version.outputs.version }}"
+          RELEASE_URL="https://github.com/YojanCortes/app_movil_carvajal/releases/download/$TAG/app-carvajal.apk"
+
+          # Actualizar apk_url con la URL oficial del Release
+          jq --arg url "$RELEASE_URL" '.apk_url = $url' version.json > version_tmp.json
+          mv version_tmp.json version.json
+
+          echo "🔗 URL del APK actualizada: $RELEASE_URL"
+
+      # ── 7. Commit version.json actualizado ───────────────────────
+      - name: Commit version.json con URL del Release
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add version.json
+          git diff --staged --quiet || git commit -m "ci: actualizar apk_url al Release oficial v${{ steps.version.outputs.version }}"
+          git push
+
+      # ── 8. Resumen ───────────────────────────────────────────────
+      - name: Resumen del Release
+        run: |
+          echo ""
+          echo "╔══════════════════════════════════════════════════╗"
+          echo "║  🎉 Release v${{ steps.version.outputs.version }} publicado!          ║"
+          echo "║  📱 Descarga: https://yojancortes.github.io/    ║"
+          echo "║              app_movil_carvajal/                 ║"
+          echo "╚══════════════════════════════════════════════════╝"
