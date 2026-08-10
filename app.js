@@ -12,11 +12,11 @@ const CONFIG = {
   pageUrl: 'https://yojancortes.github.io/app_movil_carvajal/',
 
   // Fallback: URL directa del APK si version.json no responde
-  apkFallback: 'https://raw.githubusercontent.com/YojanCortes/app_movil_carvajal/main/app-carvajal.apk',
+  apkFallback: './app-carvajal.apk',
 };
 
 // ── Estado global ──────────────────────────────────────────────────────
-let apkUrl = CONFIG.apkFallback;
+let apkUrl = './app-carvajal.apk';
 let versionData = null;
 
 // ── DOM Ready ──────────────────────────────────────────────────────────
@@ -40,8 +40,8 @@ async function cargarVersionInfo() {
     const data = await res.json();
     versionData = data;
 
-    // Actualiza URL del APK con la del JSON
-    if (data.apk_url) apkUrl = data.apk_url;
+    // Actualiza URL del APK con la del JSON (desactivado para usar siempre la ruta local confiable en la web)
+    // if (data.apk_url) apkUrl = data.apk_url;
 
     // Actualiza badge de versión
     mostrarVersionBadge(data.version);
