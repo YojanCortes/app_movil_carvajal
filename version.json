@@ -1,7 +1,8 @@
-﻿{
-    "notas":  "Corregir internet, buscador manual y bluetooth",
-    "pagina_descarga":  "https://yojancortes.github.io/app_movil_carvajal/",
-    "fecha":  "2026-08-10",
-    "version":  "1.0.4",
-    "apk_url":  "https://raw.githubusercontent.com/YojanCortes/app_movil_carvajal/main/app-carvajal.apk"
+{
+    "notas": "Corregir escanear; corregir internet y dropdown de impresora; buscador manual y bluetooth",
+    "pagina_descarga": "https://yojancortes.github.io/app_movil_carvajal/",
+    "fecha": "2026-08-10",
+    "version": "1.0.4",
+    "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.0.4/app-carvajal.apk"
+
 }
