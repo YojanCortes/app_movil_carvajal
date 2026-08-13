@@ -1,7 +1,7 @@
 {
-  "notas": "V1.0.9: Solución de actualización inmediata del bus en venta rápida al cambiar de máquina y corrección de asignación para viajes futuros de múltiples días.",
+  "notas": "V1.1.0: Nueva interfaz interactiva para selección de bus con estado en tiempo real (Libre/Ocupado), advertencia inteligente de asignación duplicada, y corrección del visor de asientos ocupados en modo producción.",
   "pagina_descarga": "https://yojancortes.github.io/app_movil_carvajal/",
   "fecha": "2026-08-13",
-  "version": "1.0.9",
-  "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.0.9/app-carvajal.apk"
+  "version": "1.1.0",
+  "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.1.0/app-carvajal.apk"
 }
