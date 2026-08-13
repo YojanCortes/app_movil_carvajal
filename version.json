@@ -1,7 +1,7 @@
 {
-  "notas": "V1.0.7: Diálogo de venta por asiento (tipo de pasajero individual), colores rayados por canal de venta, timeout de red aumentado a 15s para conexiones móviles",
+  "notas": "V1.0.9: Solución de actualización inmediata del bus en venta rápida al cambiar de máquina y corrección de asignación para viajes futuros de múltiples días.",
   "pagina_descarga": "https://yojancortes.github.io/app_movil_carvajal/",
-  "fecha": "2026-08-12",
-  "version": "1.0.7",
-  "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.0.7/app-carvajal.apk"
+  "fecha": "2026-08-13",
+  "version": "1.0.9",
+  "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.0.9/app-carvajal.apk"
 }
