@@ -1,7 +1,7 @@
 {
-  "notas": "V1.1.0: Nueva interfaz interactiva para selección de bus con estado en tiempo real (Libre/Ocupado), advertencia inteligente de asignación duplicada, y corrección del visor de asientos ocupados en modo producción.",
+  "notas": "V1.1.1: Desglose de ventas por método de pago (Efectivo, Transf, Tarjeta) en el cierre de turno, visualización de RUT y nombre del trabajador en el resumen, indicador dinámico de descuadres físicos y actualización de la boleta impresa.",
   "pagina_descarga": "https://yojancortes.github.io/app_movil_carvajal/",
   "fecha": "2026-08-13",
-  "version": "1.1.0",
-  "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.1.0/app-carvajal.apk"
+  "version": "1.1.1",
+  "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.1.1/app-carvajal.apk"
 }
