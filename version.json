@@ -1,7 +1,7 @@
 {
-  "notas": "V1.1.1: Desglose de ventas por método de pago (Efectivo, Transf, Tarjeta) en el cierre de turno, visualización de RUT y nombre del trabajador en el resumen, indicador dinámico de descuadres físicos y actualización de la boleta impresa.",
+  "notas": "V1.1.2: ¡Ahora con sistema de encomiendas incorporado! Permite registrar, escanear y entregar encomiendas directamente desde la app. Incluye buscadores, filtros en el historial, indicador de red en vivo y sincronización pendiente.",
   "pagina_descarga": "https://yojancortes.github.io/app_movil_carvajal/",
-  "fecha": "2026-08-13",
-  "version": "1.1.1",
-  "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.1.1/app-carvajal.apk"
+  "fecha": "2026-08-20",
+  "version": "1.1.2",
+  "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.1.2/app-carvajal.apk"
 }
