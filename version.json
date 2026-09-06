@@ -1,7 +1,7 @@
 {
-  "notas": "V1.1.4: Módulo de Pasajes en Línea para choferes con visualización de comentarios de referencia de pasajeros en tiempo real. Filtro de búsqueda optimizado.",
+  "notas": "V1.1.5: Corrección en el sistema de alertas sonoras y visuales para compras web. Las notificaciones se emiten exactamente una sola vez al confirmarse la compra.",
   "pagina_descarga": "https://yojancortes.github.io/app_movil_carvajal/",
   "fecha": "2026-09-06",
-  "version": "1.1.4",
-  "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.1.4/app-carvajal.apk"
+  "version": "1.1.5",
+  "apk_url": "https://github.com/YojanCortes/app_movil_carvajal/releases/download/v1.1.5/app-carvajal.apk"
 }
